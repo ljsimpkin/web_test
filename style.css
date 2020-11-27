@@ -1,0 +1,20 @@
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+button {
+    padding: 25px;
+    font-size: 20px;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.container {
+  padding: 70px 0;
+  text-align: center;
+}

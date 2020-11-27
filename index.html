@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="img/LogoDraft.png">
+<link rel="stylesheet" href="style.css">
+<!-- web3 JS to search for address with hash -->
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+
+<button class="enableEthereumButton">Enable Ethereum</button>
+<h2>Account: <span class="showAccount"></span></h2>
+<button class="createContractButton">Create your contract</button>
+<button id="contractStatus" onclick="startRecieptRequest()">Get Address</button>
+
+<button onclick="checkYourBalance()"; id="startButton" >check balance</button>
+
+<script src="moneyMotivate.json"> </script>
+<script src="contract_interact.js"> </script>
+<script src="timer.js"> </script>
+
+<p class="content">
+  <br>
+    <a id="contractMinutesDisplay" value="00">00</a> m
+    <a id="contractSecondsDisplay" value="00">00</a> s
+  <br>
+</p>
+
+<div class="container">
+    <h1 class="title">Time to make a point</h1>
+    Length of timer (in seconds): <input type="number" id="timeText" value=3>
+    <br>
+    Set deposit (in ether): <input type="number" id="setDeposit" value=0.0001>
+
+    <p class="content">
+      <br>
+        <a id="minutesDisplay" value="00">00</a> m
+        <a id="secondsDisplay" value="00">00</a> s
+      <br>
+    </p>
+
+      <button onclick="openFullscreen();"class="sendEthButton" id="startButton">Deposit and Start</button>
+      <button onclick="closeFullscreen();"class="withDrawButton" id="stopButton">Withdraw</button>
+</div>
+
+<!-- background -->
+<svg viewBox="0 0 500 500" preserveAspectRatio="none">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:aquamarine;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#00B285;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <path d="M0,150 C150,300 300,0 500,300 L500,00 L0,0 Z" fill="url(#grad1)" />
+</svg>
+
+
+</body>
+</html>
