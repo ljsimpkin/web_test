@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="img/LogoDraft.png">
+<link rel="stylesheet" href="src/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="src/contracts/moneyMotivate.json"> </script>
+<script src="src/connect.js"> </script>
+<script src="src/interact.js"> </script>
+<script src="src/index.js"> </script>
+
+
+<div class="header">
+    <button id="aboutButton" onclick="tabToggle('help')" value="0" >Help</button>
+    <button id="helpButton" onclick="tabToggle('about')" value="0" >About</button>
+</div>
+
+
+</head>
+<body>
+
+  <div id="help">
+    <div class="headerDiv">
+        <h2> Account: </h2>
+        <h2 id="account" class= "accounts"> Not Connected </h2>
+        <p> To begin make sure you have an ethereum wallet. If you don’t already, sign up for a free metamask account here: <a href="https://metamask.io/">https://metamask.io/</a>
+        <br><br>
+        Connect the wallet to the ‘Robsten Test Netork’ to play around with fake ethereum and learn how everything works.
+        <br><br>
+        Currently Money Motivate does not work with real ethereum and only works on your laptop browser. 
+        <br><br>
+        Feel free to email John at HR with any more questions and friendly feedback – he loves chatting about his work! <a href="mailto:johnhardet+support@gmail.com">johnhardet+support@gmail.com</a>
+
+    <!-- <button onclick="checkYourBalance()"; id="startButton" >check balance</button> -->
+    <!-- <button id="contractStatus" onclick="startRecieptRequest()">Get Address</button> -->
+
+        <!-- <p class="tx_status">
+          <span id="contractMinutesDisplay" value="00">00</span> m
+          <span id="contractSecondsDisplay" value="00">00</span> s
+       </p> -->
+        
+        </p>
+     </div>
+</div>
+
+<div  id="about">
+  <div class="headerDiv">
+    <h2>About</h2>
+    <p><br>
+    Built during the dusty confines of covid lockdown and filled with a plethora of buzzwords, Money Motivate is a tool to help you stay away from digital distractions so you can spend more time getting things done!
+    <br><br>
+    The problem is attention! We only have a small amount of it. It’s all too easy to do things that distract us especially now that our worlds are becoming increasingly digital.
+    <br><br>
+    Money Motivate enables you to agree to lock your computer screen and hold yourself accountable with real money. Set the timer and deposit the amount of money and when your time is complete, you may withdraw the money. Give up before then, and you risk losing the money forever!
+    <br><br><br>
+    <h3>A bit of background</h3>  
+    <br>
+    The idea came to light when I was thinking of ways to learn more about blockchains. I got excited by the prospect of making systems built on game theory. The idea of systems built on entirely programmable rules, that could make selfish acting people move everyone towards a common goal was an Economist’s dream! Knowing very little about blockchains, smart contracts, and ethereum I devised a project that would teach me everything I needed to know while creating something valuable.
+    <br><br>
+    I began by asking myself, what is the most basic agreement you can have? In hindsight, an ethereum smart contract built with test driven development and a sophisticated frontend wasn’t exactly what I would have considered “simple”. Instead I concluded that a single agreement against yourself would be a good place to start.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<div class="container">
+  <div class="check" id="ether">
+    <p>
+      <button class="connect" onclick="connectWallet()">Connect Wallet</button>
+    </p>
+  </div>
+    <h1 class="title">Money Motivate</h1>
+    <p>
+      Length of timer (in seconds): <input type="number" id="timeText" value=15>
+      <br>
+      Set deposit (in ether): <input type="number" id="setDeposit" value=0.0001>
+    </p>
+
+    <p class="content">
+        <span id="minutesDisplay" value="00">00</span> m
+        <span id="secondsDisplay" value="00">00</span> s
+    </p>
+
+      <button onclick="startMotivation(); "class="play" id="startButton">Deposit and Go</button>
+      <button onclick="closeFullScreen(); "class="play" id="stopButton">Withdraw and exit</button>
+</div>
+
+<!-- background -->
+<svg viewBox="0 0 500 500" preserveAspectRatio="none">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:aquamarine;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#00B285;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <path d="M0,150 C150,300 300,0 500,300 L500,00 L0,0 Z" fill="url(#grad1)" />
+</svg>
+
+<script src="src/afterLoad.js"> </script>
+
+</body>
+</html>
