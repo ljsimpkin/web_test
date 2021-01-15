@@ -20,7 +20,7 @@ async function getAccount() {
     // no need to ask for permission
   }
   else {
-    window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    window.alert('Non-Ethereum browser detected. Try out Metamask here https://metamask.io/')
     success = 0
   }
     if (success){
